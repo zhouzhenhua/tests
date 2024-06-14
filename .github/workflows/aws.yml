@@ -17,9 +17,8 @@ jobs:
 
     - name: Set up environment variables
       run: |
-        export  HTTP_PROXY=${{ env.http_proxy }}
-        export  HTTPS_PROXY=${{ env.https_proxy }}
+        #export  HTTP_PROXY=${{ env.http_proxy }}
+        #export  HTTPS_PROXY=${{ env.https_proxy }}
+        echo ${{ env.http_proxy }}
 
-    - name: Print environment variables
-      run: echo $HTTP_PROXY
- 
+
