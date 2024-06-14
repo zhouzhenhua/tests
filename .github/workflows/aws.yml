@@ -4,6 +4,9 @@ on:
   push:
     branches: [ "main" ]
 
+env:
+  http_proxy: "http://120.78.133.243:3218"
+  https_proxy: "https://120.78.133.243:3218"
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,6 +16,10 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up environment variables
-      env:
-        HTTP_PROXY: "http://120.78.133.243:3218"
-        HTTPS_PROXY: "https://120.78.133.243:3218"
+      run: |
+        export  HTTP_PROXY=${{ env.http_proxy }}
+        export  HTTPS_PROXY=${{ env.https_proxy }}
+
+    - name: Print environment variables
+      run: echo $HTTP_PROXY
+ 
