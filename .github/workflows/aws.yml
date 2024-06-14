@@ -5,8 +5,8 @@ on:
     branches: [ "main" ]
 
 env:
-  http_proxy: "http://120.78.133.243:3218"
-  https_proxy: "https://120.78.133.243:3218"
+  http_proxy: "http://120.78.133.243:3128"
+  https_proxy: "https://120.78.133.243:3128"
 jobs:
   deploy:
     runs-on: ubuntu-latest
