@@ -14,5 +14,5 @@ jobs:
 
     - name: Set up environment variables
       env:
-        HTTP_PROXY: http://120.78.133.243:3218
-        HTTPS_PROXY: https://120.78.133.243:3218
+        HTTP_PROXY: "http://120.78.133.243:3218"
+        HTTPS_PROXY: "https://120.78.133.243:3218"
