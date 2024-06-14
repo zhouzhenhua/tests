@@ -19,7 +19,11 @@ jobs:
       run: |
         export  HTTP_PROXY=${{ env.http_proxy }}
         export  HTTPS_PROXY=${{ env.https_proxy }}
-    - name: Get URL 
+    - name: Get url one
       run: |
         curl http://cip.cc
+    - name: Get url two
+      run: |
+        curl https://checkip.amazonaws.com
+        
 
